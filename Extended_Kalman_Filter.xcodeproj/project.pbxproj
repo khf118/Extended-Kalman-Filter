@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE5B9E3B20130C4F00075EC9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5B9E3A20130C4F00075EC9 /* main.cpp */; };
+		CE1AED72201328D300C4EB37 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED71201328D300C4EB37 /* main.cpp */; };
+		CE1AED7C2013290000C4EB37 /* FusionEKF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED76201328FF00C4EB37 /* FusionEKF.cpp */; };
+		CE1AED7D2013290000C4EB37 /* kalman_filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED77201328FF00C4EB37 /* kalman_filter.cpp */; };
+		CE1AED7E2013290000C4EB37 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1AED78201328FF00C4EB37 /* tools.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE1AED71201328D300C4EB37 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		CE1AED73201328FF00C4EB37 /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tools.h; path = src/tools.h; sourceTree = "<group>"; };
+		CE1AED74201328FF00C4EB37 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = src/json.hpp; sourceTree = "<group>"; };
+		CE1AED75201328FF00C4EB37 /* measurement_package.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = measurement_package.h; path = src/measurement_package.h; sourceTree = "<group>"; };
+		CE1AED76201328FF00C4EB37 /* FusionEKF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FusionEKF.cpp; path = src/FusionEKF.cpp; sourceTree = "<group>"; };
+		CE1AED77201328FF00C4EB37 /* kalman_filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kalman_filter.cpp; path = src/kalman_filter.cpp; sourceTree = "<group>"; };
+		CE1AED78201328FF00C4EB37 /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tools.cpp; path = src/tools.cpp; sourceTree = "<group>"; };
+		CE1AED79201328FF00C4EB37 /* Eigen */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Eigen; path = src/Eigen; sourceTree = "<group>"; };
+		CE1AED7A201328FF00C4EB37 /* FusionEKF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FusionEKF.h; path = src/FusionEKF.h; sourceTree = "<group>"; };
+		CE1AED7B201328FF00C4EB37 /* kalman_filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kalman_filter.h; path = src/kalman_filter.h; sourceTree = "<group>"; };
 		CE5B9E3720130C4F00075EC9 /* Extended_Kalman_Filter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Extended_Kalman_Filter; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5B9E3A20130C4F00075EC9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +53,16 @@
 		CE5B9E2E20130C4F00075EC9 = {
 			isa = PBXGroup;
 			children = (
-				CE5B9E3920130C4F00075EC9 /* Extended_Kalman_Filter */,
+				CE1AED79201328FF00C4EB37 /* Eigen */,
+				CE1AED76201328FF00C4EB37 /* FusionEKF.cpp */,
+				CE1AED7A201328FF00C4EB37 /* FusionEKF.h */,
+				CE1AED74201328FF00C4EB37 /* json.hpp */,
+				CE1AED77201328FF00C4EB37 /* kalman_filter.cpp */,
+				CE1AED7B201328FF00C4EB37 /* kalman_filter.h */,
+				CE1AED75201328FF00C4EB37 /* measurement_package.h */,
+				CE1AED78201328FF00C4EB37 /* tools.cpp */,
+				CE1AED73201328FF00C4EB37 /* tools.h */,
+				CE1AED71201328D300C4EB37 /* main.cpp */,
 				CE5B9E3820130C4F00075EC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +73,6 @@
 				CE5B9E3720130C4F00075EC9 /* Extended_Kalman_Filter */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE5B9E3920130C4F00075EC9 /* Extended_Kalman_Filter */ = {
-			isa = PBXGroup;
-			children = (
-				CE5B9E3A20130C4F00075EC9 /* main.cpp */,
-			);
-			path = Extended_Kalman_Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5B9E3B20130C4F00075EC9 /* main.cpp in Sources */,
+				CE1AED7D2013290000C4EB37 /* kalman_filter.cpp in Sources */,
+				CE1AED7C2013290000C4EB37 /* FusionEKF.cpp in Sources */,
+				CE1AED72201328D300C4EB37 /* main.cpp in Sources */,
+				CE1AED7E2013290000C4EB37 /* tools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +249,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I/usr/local/include",
+					"$(OTHER_CFLAGS)",
+					"-I/usr/local/Cellar/openssl/1.0.2l/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +262,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I/usr/local/include",
+					"$(OTHER_CFLAGS)",
+					"-I/usr/local/Cellar/openssl/1.0.2l/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
